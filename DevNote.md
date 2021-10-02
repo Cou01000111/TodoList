@@ -3,6 +3,7 @@
 ## 実装予定機能
 
 ### タスクについて
+
 - タスクの登録
 - タスクへのタグ付け
 - タスクへの優先度付け
@@ -10,26 +11,28 @@
 - タスクの締め切り
 
 ### タスクの閲覧について
+
 - 優先度順、締め切り順
 - タグでの絞り込み
 
 ## 使用技術予定
-Vue.js(+Vuetify) + TypeScript + local storage
+
+Vue<del>3</del>2 + TypeScript
 
 ### 新規使用技術
-- Adobe XD
-- Adobe XD ui kit
-- Vuetify UI Kit Adobe Xd
+- <del>Vue3.ts(Composition API)</del>vue3&typescript&composition APIを初見でやるのは思ったより難しかったので↓
+- Vue2.ts(Class-Style)
+- Vuetify以外のVue用cssライブラリ
 
 ## 使用予定色
-https://colorbase.app/palettes/preview?colors=13d6a7-1f3732-0d8f6f-064738&name=todolist
+https://colorbase.app/palettes/my?paletteId=d7473e42-2d1e-4710-b5bb-eaa146b79101
 
 ## オブジェクト
 ### rootオブジェクト
 
 ```json
 {
-    "root":{
+    "user_data":{
         "task_list":task[],
         "tag_list":tag[]
     }
@@ -42,15 +45,21 @@ https://colorbase.app/palettes/preview?colors=13d6a7-1f3732-0d8f6f-064738&name=t
 ```json
 {
     "task":{
+        "id":number,
         "priority":number,
         "deadline":string(Date)|null,
-        "parent":task,
-        "child_list":number[],
+        "parent_id":number,
         "name":string,
+        "description":string,
+        "child_list":number[],
         "tag_id_list":number[]
     }
 }
 ```
+
+idはかぶっていはいけない
+deadlineは""でもいい
+deadlineの書式はYYYYMMDD(例:20211231)
 
 ### tagオブジェクト
 

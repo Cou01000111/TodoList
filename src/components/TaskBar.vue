@@ -3,12 +3,10 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
-export default Vue.extend({
-  data() {
-    return {
-      isOrder: true
-    }
-  }
-})
+import { Component, Prop, Vue } from 'vue-property-decorator';
+
+@Component
+export default class TaskBar extends Vue {
+  private isOrder = true;
+}
 </script>

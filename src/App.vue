@@ -1,24 +1,19 @@
 <template>
   <v-app>
     <global-header />
-    <router-view />
-    <global-footer />
+    <router-view class="mx-5" />
+    <!-- <global-footer /> -->
   </v-app>
 </template>
 
 <script lang="ts">
-import Vue from 'vue';
+import { Component, Prop, Vue } from 'vue-property-decorator';
 import GlobalHeader from "./components/Header.vue";
-import GlobalFooter from "./components/Footer.vue";
+/* import GlobalFooter from "./components/Footer.vue"; */
 
-export default Vue.extend({
-  name: 'App',
-  components: {
-    GlobalHeader,
-    GlobalFooter
-  },
-  data: () => ({
-    //
-  }),
-});
+
+@Component({ components: { GlobalHeader, /* GlobalFooter */ } })
+export default class App extends Vue {
+
+}
 </script>

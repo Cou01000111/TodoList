@@ -1,0 +1,101 @@
+{
+  "task_list": [
+    {
+      "id": 0,
+      "priority": 1,
+      "deadline": "20211002",
+      "name": "テストデータを作る",
+      "parent_id": -1,
+      "description": "自作TodoListのためのダミーデータを作成する",
+      "child_list": [1, 2],
+      "tag_id_list": [0]
+    },
+    {
+      "id": 1,
+      "priority": 1,
+      "deadline": "20211001",
+      "name": "テストデータの枠をつくる",
+      "parent_id": 0,
+      "description": "どのようなデータを永続化するか、json形式で決める",
+      "child_list": [0],
+      "tag_id_list": [0, 2]
+    },
+    {
+      "id": 2,
+      "priority": 1,
+      "deadline": "20211002",
+      "name": "テストデータを入力する",
+      "parent_id": 0,
+      "description": "設定した形式に沿ってデータを入力していく",
+      "child_list": [1, 2],
+      "tag_id_list": [0, 1]
+    },
+    {
+      "id": 3,
+      "priority": 2,
+      "deadline": "20211001",
+      "name": "おやつをつくる1",
+      "parent_id": -1,
+      "description": "",
+      "child_list": [0],
+      "tag_id_list": [3]
+    },
+    {
+      "id": 4,
+      "priority": 2,
+      "deadline": "20211004",
+      "name": "おやつをつくる2",
+      "parent_id": 3,
+      "description": "",
+      "child_list": [0],
+      "tag_id_list": [3]
+    },
+    {
+      "id": 5,
+      "priority": 2,
+      "deadline": "20211010",
+      "name": "おやつをつくる3",
+      "parent_id": 4,
+      "description": "",
+      "child_list": [0],
+      "tag_id_list": [0, 1, 2, 3, 4, 5, 6]
+    }
+  ],
+  "global_tag_list": [
+    {
+      "id": 0,
+      "name": "優先度:高",
+      "color": "#73dfb5"
+    },
+    {
+      "id": 1,
+      "name": "Aさんに依頼予定",
+      "color": "#7a8b7b"
+    },
+    {
+      "id": 2,
+      "name": "Bさんに依頼予定",
+      "color": "#ff1122"
+    },
+    {
+      "id": 3,
+      "name": "test1",
+      "color": "#73dfb5"
+    },
+    {
+      "id": 4,
+      "name": "test2",
+      "color": "#73dfb5"
+    },
+    {
+      "id": 5,
+      "name": "test3",
+      "color": "#73dfb5"
+    },
+    {
+      "id": 6,
+      "name": "test4",
+      "color": "#73dfb5"
+    }
+  ]
+}
