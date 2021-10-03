@@ -1,12 +1,13 @@
 <template >
-  <v-list>
-    <task-item
-      v-for="task in task_list"
-      :key="task.id"
-      :task="task"
-      :global_tag_list="global_tag_list"
-    />
-  </v-list>
+  <v-card elevation="10" class="ma-3">
+    <v-list>
+      <task-item
+        v-for="task in task_list"
+        :key="task.id"
+        :task="task"
+        :global_tag_list="global_tag_list"
+      /> </v-list
+  ></v-card>
 </template>
 
 <script lang="ts">

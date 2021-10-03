@@ -1,5 +1,5 @@
 <template>
-  <div id="main" class="ma-5">
+  <div id="main" class="">
     <task-bar class="mt-15" />
     <task-list :task_list="task_list" :global_tag_list="global_tag_list" />
   </div>
